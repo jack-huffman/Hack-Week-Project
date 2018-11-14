@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles at the University of Missouri -->
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CS4830 Board</title>
+		<script src="js/mustache.js"></script>
+        
+        
+	</head>
+	<body>
+        
+        <!-- Image and text -->
+        <nav class="navbar navbar-default bg-light">
+            <img src="/svg/logo-gist.svg" alt="Logo">
+            <a class="navbar-brand" href="#">
+                CS4830 Board
+            </a>
+        </nav>
+         
+		<div id="display" class="container"></div>
+        		
+        <!-- script tags with an unknown type attribute will not be executed by the JS parser -->
+		<script id="template" type="x-tmpl-mustache">
+			{{#title}} <h1> {{.}} </h1> {{/title}}
+            {{#content}} <p> {{.}} </p> {{/content}}
+            
+		</script>
+        
+		<script>            
+			// Reference: https://github.com/janl/mustache.js
+ 			var post = {
+ 				title: "Sample Post",
+ 				content: "This is an example post. Pay no attention to what is in here. Lorem Ipsum blah blah blah",
+ 			};
+
+            var template = document.getElementById("template"); 
+            
+            var output = Mustache.render(template.innerHTML, post); 
+					
+			var display = document.getElementById("display");
+			display.innerHTML = output;
+		</script>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+	</body>
+</html>
