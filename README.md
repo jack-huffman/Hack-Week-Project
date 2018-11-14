@@ -2,9 +2,9 @@
 A group project made for our CS4830 class
 
 ## Introduction
-Group Name: Error 404
-Group Members: Lee Offir, Austin Parrish, Jack Huffman, John Lund-Molfese
-Background Information: ???
+Group Name: Error 404  
+Group Members: Lee Offir, Austin Parrish, Jack Huffman, John Lund-Molfese  
+Background Information: ???  
 ## Problem:
 Our users need an application to communicate quickly, in easy-to-read, short posts.
 ## Solution
