@@ -1,7 +1,7 @@
 
 $(function(){
    	//make connection
-	var socket = io.connect('http://localhost:3000')
+	var socket = io.connect('http://ec2-54-173-240-76.compute-1.amazonaws.com:3000/')
 
 	//buttons and inputs
 	var message = $("#message")
